@@ -34,6 +34,10 @@ It is a 2-step connection\
 ssh -fNR </path/to/socket>:localhost:22 <Host_B>
 ```
 ```
+# On [ B ] : /etc/ssh/sshd_config
+StreamLocalBindUnlink yes
+```
+```
 # On [ C ]
 ssh <Host_B> -t \
 'ssh -o "ProxyCommand nc -U </path/to/socket>" <user_for_A>@localhost
