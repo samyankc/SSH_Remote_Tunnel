@@ -36,7 +36,7 @@ ssh -fNR </path/to/socket>:localhost:22 <Host_B>
 ```
 # On [ C ]
 ssh <Host_B> -t \
-'ssh -o "ProxyCommand nc -U </path/to/socket>" <user_for_A>:<Host_A>'
+'ssh -o "ProxyCommand nc -U </path/to/socket>" <user_for_A>@localhost
 ```
 
 # Requirement
